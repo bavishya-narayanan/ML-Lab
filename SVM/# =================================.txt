@@ -1,0 +1,27 @@
+# ==========================================
+# PROGRAM: Simple Keras Neural Network
+# ==========================================
+
+from keras.models import Sequential
+from keras.layers import Dense
+import numpy as np
+
+# Sample Data
+X = np.array([[0,0],[0,1],[1,0],[1,1]])
+y = np.array([0,1,1,0])
+
+# Create Model
+model = Sequential()
+model.add(Dense(4, input_dim=2, activation='relu'))
+model.add(Dense(1, activation='sigmoid'))
+
+# Compile Model
+model.compile(optimizer='adam',
+              loss='binary_crossentropy',
+              metrics=['accuracy'])
+
+# Train Model
+model.fit(X, y, epochs=10, verbose=0)
+
+# Predict
+print(model.predict(X))

@@ -1,0 +1,57 @@
+Lab Assessment-1
+
+1) internal=# CREATE TABLE phone(phone_id CHAR(5),model VARCHAR(25),release_date DATE,price CHAR(9));
+
+Output:
+
+
+ internal=# INSERT INTO PHONE VALUES('101','iphone15','2023-09-22','69999');
+ internal=# INSERT INTO PHONE VALUES('102','galaxy s24','2024-01-31','74999');
+ internal=# INSERT INTO PHONE VALUES('103','oneplus 12','2024-01-23','64999');
+ internal=# INSERT INTO PHONE VALUES('104','pixel 8','2023-10-12','75999');
+ internal=# INSERT INTO PHONE VALUES('105','redmi note13','2024-01-10','24999');
+ internal=# INSERT INTO PHONE VALUES('106','nothing phone 2','2023-07-17','44999');
+ internal=# INSERT INTO PHONE VALUES('107','vivo v30','2024-03-14','33999');
+
+ Output:
+ 
+ internal=# select * from phone;
+ phone_id |      model      | release_date |   price
+----------+-----------------+--------------+-----------
+ 101      | iphone15        | 2023-09-22   | 69999
+ 102      | galaxy s24      | 2024-01-31   | 74999
+ 103      | oneplus 12      | 2024-01-23   | 64999
+ 104      | pixel 8         | 2023-10-12   | 75999
+ 105      | redmi note13    | 2024-01-10   | 24999
+ 106      | nothing phone 2 | 2023-07-17   | 44999
+ 107      | vivo v30        | 2024-03-14   | 33999
+(7 rows)
+
+internal=#  CREATE TABLE customer(customer_id CHAR(9),name VARCHAR(30),phone_id CHAR(9),date_of_purchase DATE);
+
+Output:
+
+internal=# select * from customer;
+ customer_id | name | phone_id | date_of_purchase
+-------------+------+----------+------------------
+(0 rows)
+
+
+internal=# INSERT INTO CUSTOMER VALUES('201','arun kumar','101','2024-01-15');
+INSERT 0 1
+internal=# INSERT INTO CUSTOMER VALUES('202','priya sharma','102','2024-02-10');
+INSERT 0 1
+internal=# INSERT INTO CUSTOMER VALUES('203','karthik raj','101','2024-02-18');
+INSERT 0 1
+internal=# INSERT INTO CUSTOMER VALUES('204','divya mohan','104','2024-03-05');
+INSERT 0 1
+internal=# INSERT INTO CUSTOMER VALUES('205','rahul das','102','2024-03-12');
+INSERT 0 1
+internal=# INSERT INTO CUSTOMER VALUES('206','sneha ravi','106','2024-04-20');
+INSERT 0 1
+internal=# INSERT INTO CUSTOMER VALUES('207','hema','106','2024-04-20');
+INSERT 0 1
+
+Out
+
+ 
